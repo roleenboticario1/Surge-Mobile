@@ -108,6 +108,8 @@ class AuthController extends Controller
                         }
                         return response()->json(['token' => $token,'message' => 'Logged in Successfully!'], 200);      
                   }
+              }else{
+                  return response()->json(['message' => 'Verify your Account First, Check your email to verify.'], 422); 
               }
 
             
