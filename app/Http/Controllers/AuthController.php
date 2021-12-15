@@ -61,7 +61,7 @@ class AuthController extends Controller
           if($users)
           {  
              \Mail::to($users->email)->send(new VerificationEmail($users));
-             return response()->json(['message' => 'User Registered Successfully!'], 200);
+             return response()->json(['message' => 'User Registered Successfully and check your email to verify your account!'], 200);
           }else{
              return response()->json(['message' => 'User Not Register!'], 422);
           }

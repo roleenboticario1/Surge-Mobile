@@ -27,9 +27,7 @@ class VerifyController extends Controller
          'email_verified_at' => Carbon::now(),
          'email_verification_token' => ''
        ]);
-       
 
-        return response()->json(['message' => 'Your account is activated, you can log in now']);
-
+      return response()->json(['message' => 'Your account is activated, you can log in now']);
     }
 }
